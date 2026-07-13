@@ -23,19 +23,20 @@ This fragmented workflow leads to:
 The AI Operations Assistant centralizes this information and proactively surfaces the right context at the right time.
 
 ### MVP Features
-Client & household database
-AI-generated pre-visit briefings
-AI-generated post-visit client messages
-Google Calendar integration
-Operational workflow automation
+
+- Client & household database
+- AI-generated pre-visit briefings
+- AI-generated post-visit client messages
+- Google Calendar integration
+- Operational workflow automation
 
 ### Project Goals
 
 This project demonstrates:
 
-AI application development
-Product management
-Business process optimization
-Database design
-Backend engineering
-AI implementation
+- AI application development
+- Product management
+- Business process optimization
+- Database design
+- Backend engineering
+- AI implementation
