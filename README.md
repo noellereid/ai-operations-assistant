@@ -1,4 +1,4 @@
-# ai-operations-assistant
+# AI Operations Assistant
 AI-powered workflow assistant that helps field service professionals reduce administrative work through operational context and intelligent automation.
 
 ### Overview
@@ -15,10 +15,10 @@ Field service workers spend valuable time searching through calendars, notes, Go
 
 This fragmented workflow leads to:
 
-Administrative overhead
-Delayed customer communication
-Increased cognitive load
-Greater risk of missed instructions
+- Administrative overhead
+- Delayed customer communication
+- Increased cognitive load
+- Greater risk of missed instructions
 
 The AI Operations Assistant centralizes this information and proactively surfaces the right context at the right time.
 
