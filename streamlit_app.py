@@ -2,6 +2,14 @@ from pathlib import Path
 
 import pandas as pd
 import streamlit as st
+import os
+from dotenv import load_dotenv
+from openai import OpenAI
+
+load_dotenv()
+
+api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=api_key) if api_key else None
 
 
 st.set_page_config(
@@ -365,3 +373,31 @@ if generate_update:
     st.caption(
         "Human approval is required before any message is sent."
     )
+
+st.divider()
+
+st.subheader("AI connection")
+
+if client is None:
+    st.warning(
+        "OpenAI API key was not found. "
+        "Check that OPENAI_API_KEY is saved in the .env file."
+    )
+else:
+    st.success("OpenAI API key loaded securely.")
+
+    if st.button("Test AI connection"):
+        try:
+            with st.spinner("Testing connection..."):
+                response = client.responses.create(
+                    model="gpt-4o-mini",
+                    input=(
+                        "Reply with exactly this sentence: "
+                        "AI connection successful."
+                    ),
+                )
+
+            st.success(response.output_text)
+
+        except Exception as error:
+            st.error(f"AI connection failed: {error}")
